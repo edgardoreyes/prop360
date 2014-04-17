@@ -1,4 +1,5 @@
-﻿@{
+﻿@model prop360.web.Models.ContactUsViewModel
+@{
     ViewBag.Title = "Contact Us";
 }
 <div class="col-md-12">
@@ -20,28 +21,37 @@
                             <div class="co-form">
                                 <form class="form-horizontal" method="post">
                                     <fieldset>
+                                        @Html.ValidationSummary(true)
                                         <div class="form-group">
-                                            <label class="control-label col-md-3" for="name">Name</label>
+                                            @*<label class="control-label col-md-3" for="name">Name</label>*@
+                                            @Html.LabelFor(m => m.Name, new { @class = "col-md-3 control-label" })
                                             <div class="col-md-9">
-                                                <input type="text" class="form-control" id="name" name="name" placeholder="Name" data-val="true" data-val-required="*">
+                                                @*<input type="text" class="form-control" id="name" name="name" placeholder="Name" />*@
+                                                @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                                                @Html.ValidationMessageFor(m => m.Name)
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-3" for="email">Email</label>
                                             <div class="col-md-9">
-                                                <input type="text" class="form-control" id="email" name="email" placeholder="Email" data-val="true" data-val-required="*">
+                                                @*<input type="text" class="form-control" id="email" name="email" placeholder="Email" data-val="true" data-val-required="*">*@
+                                                @Html.TextBoxFor(m => m.Email, new { @type = "email", @class = "form-control" })
+                                                @Html.ValidationMessageFor(m => m.Email)
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-3" for="website">Website</label>
                                             <div class="col-md-9">
-                                                <input type="text" class="form-control" id="website" name="website" placeholder="Website" data-val="true" data-val-required="*">
+                                                @*<input type="text" class="form-control" id="website" name="website" placeholder="Website" data-val="true" data-val-required="*">*@
+                                                @Html.TextBoxFor(m => m.Website, new { @class = "form-control" })
+                                                @Html.ValidationMessageFor(m => m.Website)
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-3" for="comment">Message</label>
                                             <div class="col-md-9">
-                                                <textarea class="form-control" id="comment" rows="4" name="comment" placeholder="Message..." data-val="true" data-val-required="*"></textarea>
+                                                @*<textarea class="form-control" id="comment" rows="4" name="comment" placeholder="Message..." data-val="true" data-val-required="*"></textarea>*@
+                                                @Html.TextAreaFor(m => m.Comment, new { @class = "form-control" })
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -82,5 +92,7 @@
         </div>
         <!-- Main Content Ends Here -->
     </div>
-
 </div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
