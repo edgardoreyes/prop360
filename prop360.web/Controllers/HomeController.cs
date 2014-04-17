@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using prop360.web.Models;
 
 namespace prop360.web.Controllers
 {
@@ -24,6 +25,12 @@ namespace prop360.web.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Contact(ContactUsViewModel model)
+        {
             return View();
         }
     }

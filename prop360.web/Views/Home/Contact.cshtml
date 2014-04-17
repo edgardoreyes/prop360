@@ -1,17 +1,86 @@
 ﻿@{
-    ViewBag.Title = "Contact";
+    ViewBag.Title = "Contact Us";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<div class="col-md-12">
+    <div class="whity content">
+        <!-- Main Content Starts Here -->
+        <!-- Content should be encloased inside div with the class "posts" -->
+        <div class="posts">
+            <!-- Each entry should be enclosed inside div with the class "entry" -->
+            <div class="entry">
+                <div class="padd">
+                    <!-- Contact Page title -->
+                    <h2>Contact Us</h2>
+                    <!-- Contact Page Para -->
+                    <p>Fusce imperdiet, risus eget viverra faucibus, diam mi vestibulum libero, ut vestibulum tellus magna nec enim. Nunc dapibus varius interdum. Phasellus at lorem ut lectus fermentum convallis.</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="padd">
+                            <div class="co-form">
+                                <form class="form-horizontal" method="post">
+                                    <fieldset>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3" for="name">Name</label>
+                                            <div class="col-md-9">
+                                                <input type="text" class="form-control" id="name" name="name" placeholder="Name" data-val="true" data-val-required="*">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3" for="email">Email</label>
+                                            <div class="col-md-9">
+                                                <input type="text" class="form-control" id="email" name="email" placeholder="Email" data-val="true" data-val-required="*">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3" for="website">Website</label>
+                                            <div class="col-md-9">
+                                                <input type="text" class="form-control" id="website" name="website" placeholder="Website" data-val="true" data-val-required="*">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3" for="comment">Message</label>
+                                            <div class="col-md-9">
+                                                <textarea class="form-control" id="comment" rows="4" name="comment" placeholder="Message..." data-val="true" data-val-required="*"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-offset-3 col-md-9">
+                                                <button type="submit" class="btn btn-info">Send</button> &nbsp;
+                                                <button type="reset" class="btn btn-default">Reset</button>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="padd">
+                            <div class="caddress">
+                                <address>
+                                    <strong>Department of Health Care Services</strong><br>
+                                    1615 Capitol Avenue<br>
+                                    Sacramento, CA 95814<br>
+                                    <abbr title="Phone">P:</abbr> (916) 456-7890.<br><br>
+                                    <strong>ITSD</strong><br>
+                                    <a href="mailto:#">Edgardo.Reyes@dhcs.ca.gov</a>
+                                </address>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Google Map -->
+                <div class="gmap">
+                    <div class="padd">
+                        <!-- Goto Google maps and copy the embed code of your location. Replace the below embed code with your code. -->
+                        @*<iframe height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3119.2121553612483!2d-121.48589810000001!3d38.574962!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ad0d96691f7fd%3A0x5662b171081e1b6f!2s1615+Capitol+Ave!5e0!3m2!1sen!2sus!4v1397701477415"></iframe>*@
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- Main Content Ends Here -->
+    </div>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
-
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+</div>

@@ -20,20 +20,6 @@ jQuery(".prettyphoto").prettyPhoto({
    overlay_gallery: false, social_tools: false
 });
 
-/* Isotype */
-
-// cache container
-var $container = $('#portfolio,#portfolio-big');
-// initialize isotope
-$container.isotope();
-
-// filter items when filter link is clicked
-$('#filters a').click(function(){
-	var selector = $(this).attr('data-filter');
-	$container.isotope({ filter: selector });
-	return false;
-});               
-
 /* Navigation (Select box) */
 
 // Create the dropdown base
