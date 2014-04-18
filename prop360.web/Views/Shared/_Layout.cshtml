@@ -128,6 +128,7 @@
                                         </li>
                                         <li><a href="about-us.html">About Us</a></li>
                                         <li><a href="contact-us.html">Contact Us</a></li>
+                                        <li>@Html.ActionLink("My Messages","MyMessages","Home")</li>
                                     </ul>
                                 </div>
                             </div><!--/ Navigation Ends Here -->
@@ -151,6 +152,9 @@
     <div class="main">
         <div class="container">
             <div class="row">
+                <div class="col-md-12 hidden-lg">
+                    <div class="padd"><div class="navis"></div></div>
+                </div>
                 @RenderBody()
             </div>
         </div>
