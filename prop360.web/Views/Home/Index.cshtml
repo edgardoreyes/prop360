@@ -1,66 +1,14 @@
-﻿@{
+﻿@model IEnumerable<prop360.web.Models.Property>
+@{
     ViewBag.Title = "Home Page";
 }
 @*Zen Coding: .messages>(.message.row>(.col-md-10.title>lorem5)+(.col-md-2.date{April 18, 2014})+(.col-md-12.contents>lorem)+(.col-md-12.toolbar>button.btn.btn-primary.reply-button{Reply})+(.col-md-12.replies))*5*@
 
-<div class="message-header">
-    <h1>Message Board</h1>
-    <p class="lead">Latest Messages...</p>
-</div>
-<div class="messages">
-    <div class="message row">
-        <div class="col-md-10 title">
-            Lorem ipsum dolor sit amet.
-        </div>
-        <div class="col-md-2 date">April 18, 2014</div>
-        <div class="col-md-12 contents">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce vel sapien elit in malesuada semper mi, id sollicitudin urna fermentum ut fusce varius nisl ac ipsum gravida vel pretium tellus.
-        </div>
-        <div class="col-md-12 toolbar"><button class="btn btn-primary reply-button">Reply</button></div>
-        <div class="col-md-12 replies"></div>
+@*@foreach (var item in Model)
+{
+    <div>
+        <h4>@item.Address1</h4>
+        <div>@item.City, @item.State @item.Zip</div>
+        <hr />
     </div>
-    <div class="message row">
-        <div class="col-md-10 title">
-            Lorem ipsum dolor sit amet.
-        </div>
-        <div class="col-md-2 date">April 18, 2014</div>
-        <div class="col-md-12 contents">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce vel sapien elit in malesuada semper mi, id sollicitudin urna fermentum ut fusce varius nisl ac ipsum gravida vel pretium tellus.
-        </div>
-        <div class="col-md-12 toolbar"><button class="btn btn-primary reply-button">Reply</button></div>
-        <div class="col-md-12 replies"></div>
-    </div>
-    <div class="message row">
-        <div class="col-md-10 title">
-            Lorem ipsum dolor sit amet.
-        </div>
-        <div class="col-md-2 date">April 18, 2014</div>
-        <div class="col-md-12 contents">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce vel sapien elit in malesuada semper mi, id sollicitudin urna fermentum ut fusce varius nisl ac ipsum gravida vel pretium tellus.
-        </div>
-        <div class="col-md-12 toolbar"><button class="btn btn-primary reply-button">Reply</button></div>
-        <div class="col-md-12 replies"></div>
-    </div>
-    <div class="message row">
-        <div class="col-md-10 title">
-            Lorem ipsum dolor sit amet.
-        </div>
-        <div class="col-md-2 date">April 18, 2014</div>
-        <div class="col-md-12 contents">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce vel sapien elit in malesuada semper mi, id sollicitudin urna fermentum ut fusce varius nisl ac ipsum gravida vel pretium tellus.
-        </div>
-        <div class="col-md-12 toolbar"><button class="btn btn-primary reply-button">Reply</button></div>
-        <div class="col-md-12 replies"></div>
-    </div>
-    <div class="message row">
-        <div class="col-md-10 title">
-            Lorem ipsum dolor sit amet.
-        </div>
-        <div class="col-md-2 date">April 18, 2014</div>
-        <div class="col-md-12 contents">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce vel sapien elit in malesuada semper mi, id sollicitudin urna fermentum ut fusce varius nisl ac ipsum gravida vel pretium tellus.
-        </div>
-        <div class="col-md-12 toolbar"><button class="btn btn-primary reply-button">Reply</button></div>
-        <div class="col-md-12 replies"></div>
-    </div>
-</div>
+}*@

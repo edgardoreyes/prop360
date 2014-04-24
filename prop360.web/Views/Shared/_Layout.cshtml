@@ -28,6 +28,8 @@
     <link href="~/Content/Template/css/blue.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="~/Content/Template/css/style.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="~/Content/Site.css" rel="stylesheet" />
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="~/Content/Template/img/favicon/favicon.png">
@@ -77,69 +79,81 @@
                         </div>
                         <div class="navi">
                             <!-- Navigation Starts Here -->
-                            <div class="pull-left">
+
                                 <div id="ddtopmenubar" class="mattblackmenu">
-                                    <!-- Main navigation -->
-                                    <ul>
-                                        <!-- Add rel="ddsubmenu{count}" to main menu -->
-                                        <li>
-                                            <a href="index.html" rel="ddsubmenu1">Home</a>
-                                            <!-- Sub navigation, A -->
-                                            <!-- Add id "ddsubmenu{count} and class "ddsubmenustyle" -->
-                                            <ul id="ddsubmenu1" class="ddsubmenustyle">
-                                                <li><a href="index-rslider.html">Revolution Slider </a></li>
-                                                <li><a href="index.html">Flex Slider</a></li>
-                                                <li><a href="index-wt-slider.html">Without Slider</a></li>
-                                                <li><a href="index-full-width.html">Full Width</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="0-base.html" rel="ddsubmenu3">Pages</a>
-                                            <!-- Sub navigation -->
-                                            <ul id="ddsubmenu3" class="ddsubmenustyle">
-                                                <li><a href="feature.html">Features</a></li>
-                                                <li><a href="service.html">Services</a></li>
-                                                <li>
-                                                    <a href="0-base.html">More...</a>
-                                                    <ul>
-                                                        <li><a href="0-base.html">Blank Page</a></li>
-                                                        <li><a href="feature.html">Features</a></li>
-                                                        <li><a href="service.html">Services</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
+                                    <div class="pull-left">
                                         <!-- Main navigation -->
-                                        <li>
-                                            <a href="blog.html" rel="ddsubmenu2">Blog</a>
-                                            <!-- Sub Navigation -->
-                                            <ul id="ddsubmenu2" class="ddsubmenustyle">
-                                                <li><a href="blog.html">Blog</a></li>
-                                                <li><a href="blog-single.html">Blog Single</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="portfolio.html" rel="ddsubmenu2">Portfolio</a>
-                                            <!-- Sub navigation -->
-                                            <ul id="ddsubmenu2" class="ddsubmenustyle">
-                                                <li><a href="portfolio.html">Portfolio #1</a></li>
-                                                <li><a href="portfolio-big.html">Portfolio #2</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="about-us.html">About Us</a></li>
-                                        <li><a href="contact-us.html">Contact Us</a></li>
-                                        <li>@Html.ActionLink("My Messages","MyMessages","Home")</li>
-                                    </ul>
-                                </div>
+                                        <ul>
+                                            <!-- Add rel="ddsubmenu{count}" to main menu -->
+                                            <li>
+                                                <a href="index.html" rel="ddsubmenu1">Home</a>
+                                                <!-- Sub navigation, A -->
+                                                <!-- Add id "ddsubmenu{count} and class "ddsubmenustyle" -->
+                                                <ul id="ddsubmenu1" class="ddsubmenustyle">
+                                                    <li><a href="index-rslider.html">Revolution Slider </a></li>
+                                                    <li><a href="index.html">Flex Slider</a></li>
+                                                    <li><a href="index-wt-slider.html">Without Slider</a></li>
+                                                    <li><a href="index-full-width.html">Full Width</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="0-base.html" rel="ddsubmenu3">Pages</a>
+                                                <!-- Sub navigation -->
+                                                <ul id="ddsubmenu3" class="ddsubmenustyle">
+                                                    <li><a href="feature.html">Features</a></li>
+                                                    <li><a href="service.html">Services</a></li>
+                                                    <li>
+                                                        <a href="0-base.html">More...</a>
+                                                        <ul>
+                                                            <li><a href="0-base.html">Blank Page</a></li>
+                                                            <li><a href="feature.html">Features</a></li>
+                                                            <li><a href="service.html">Services</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <!-- Main navigation -->
+                                            <li>
+                                                <a href="blog.html" rel="ddsubmenu2">Blog</a>
+                                                <!-- Sub Navigation -->
+                                                <ul id="ddsubmenu2" class="ddsubmenustyle">
+                                                    <li><a href="blog.html">Blog</a></li>
+                                                    <li><a href="blog-single.html">Blog Single</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="portfolio.html" rel="ddsubmenu2">Portfolio</a>
+                                                <!-- Sub navigation -->
+                                                <ul id="ddsubmenu2" class="ddsubmenustyle">
+                                                    <li><a href="portfolio.html">Portfolio #1</a></li>
+                                                    <li><a href="portfolio-big.html">Portfolio #2</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="about-us.html">About Us</a></li>
+                                            <li><a href="contact-us.html">Contact Us</a></li>
+                                            <li>@Html.ActionLink("My Messages", "MyMessages", "Home")</li>
+                                        </ul>
+                                    </div>
+                                    <div class="pull-right">
+                                        @Html.Partial("_LoginPartial")
+                                    </div>
                             </div><!--/ Navigation Ends Here -->
                         </div>
+
                     </div>
+                    @*<div class="pull-right">*@
+
+                    @*</div>*@
+
+
+                    <!-- Share it link for slider -->
+                    <!--
                     <div class="share">
                         <div class="pull-right">
-                            <!-- Share it link for slider -->
                             <p><a href="#" class="open"><span class="hidden-xs">Share it <i class="fa fa-share"></i></span></a></p>
                         </div>
                     </div>
+                    -->
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -251,7 +265,7 @@
     <script src="~/Scripts/html5shiv.js"></script>
     <!-- Custom JS -->
     <script src="~/Scripts/custom.js"></script>
-    
+
     @RenderSection("scripts", required: false)
 
 </body>

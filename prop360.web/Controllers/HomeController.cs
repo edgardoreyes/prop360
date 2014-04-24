@@ -10,14 +10,18 @@ namespace prop360.web.Controllers
 {
     public class HomeController : Controller
     {
-        private IMailService _mail;
+        Prop360Db _db = new Prop360Db();
 
-        public HomeController(IMailService mail)
-        {
-            _mail = mail;
-        }
+        //private IMailService _mail;
+
+        //public HomeController(IMailService mail)
+        //{
+        //    _mail = mail;
+        //}
         public ActionResult Index()
         {
+            //var model = _db.Properties.ToList();
+
             return View();
         }
 
@@ -35,27 +39,36 @@ namespace prop360.web.Controllers
             return View();
         }
 
-        [HttpPost]
-        public ActionResult Contact(ContactUsViewModel model)
-        {
-            var msg = string.Format("Comment from: {1}{0}Email:{2}{0}Website: {3}{0}Comment:{4}",
-                Environment.NewLine,
-                model.Name,
-                model.Email,
-                model.Website,
-                model.Comment);
+        //[HttpPost]
+        //public ActionResult Contact(ContactUsViewModel model)
+        //{
+        //    var msg = string.Format("Comment from: {1}{0}Email:{2}{0}Website: {3}{0}Comment:{4}",
+        //        Environment.NewLine,
+        //        model.Name,
+        //        model.Email,
+        //        model.Website,
+        //        model.Comment);
 
-            if (_mail.SendMail("noreply@yourdomain.com", "foo@yourdomain.com", "Website contact", msg))
-            {
-                ViewBag.MailSent = true;
-            }
-            return View();
-        }
+        //    if (_mail.SendMail("noreply@yourdomain.com", "foo@yourdomain.com", "Website contact", msg))
+        //    {
+        //        ViewBag.MailSent = true;
+        //    }
+        //    return View();
+        //}
 
         [Authorize]
         public ActionResult MyMessages()
         {
             return View();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (_db != null)
+            {
+                _db.Dispose();
+            }
+            base.Dispose(disposing);
         }
     }
 }

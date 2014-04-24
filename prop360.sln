@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prop360.web", "prop360.web\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prop360.web.Tests", "prop360.web.Tests\prop360.web.Tests.csproj", "{290151A1-BDDA-4A4C-82E1-E802F99B7974}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "..\..\..\Documents\Visual Studio 2013\Projects\WebApplication1\WebApplication1.csproj", "{55F75BE5-1396-46CF-A402-E6C6E14E7A6D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{16843B15-EAC7-489E-BAE8-FC9D17FD2F68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{290151A1-BDDA-4A4C-82E1-E802F99B7974}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{290151A1-BDDA-4A4C-82E1-E802F99B7974}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{290151A1-BDDA-4A4C-82E1-E802F99B7974}.Release|Any CPU.Build.0 = Release|Any CPU
-		{55F75BE5-1396-46CF-A402-E6C6E14E7A6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{55F75BE5-1396-46CF-A402-E6C6E14E7A6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{55F75BE5-1396-46CF-A402-E6C6E14E7A6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{55F75BE5-1396-46CF-A402-E6C6E14E7A6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16843B15-EAC7-489E-BAE8-FC9D17FD2F68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16843B15-EAC7-489E-BAE8-FC9D17FD2F68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16843B15-EAC7-489E-BAE8-FC9D17FD2F68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16843B15-EAC7-489E-BAE8-FC9D17FD2F68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

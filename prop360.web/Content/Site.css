@@ -1,0 +1,29 @@
+.rightblackmenu {
+    margin-top: -5px;
+    font-size: 12px;
+    list-style-type: none;
+    /*background:#0072c6 !important;*/
+}
+.rightblackmenu li a {
+    border-right: 0 none !important;
+    padding: 12px 10px !important;
+}
+
+/*.rightblackmenu li a {
+    background: none repeat scroll 0 0 #0072C6 !important;
+}
+.rightblackmenu li a {
+    background: none repeat scroll 0 0 #414141;
+    border-right: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    display: block;
+    float: right;
+    margin: 0;
+    padding: 6px 8px;
+    text-decoration: none;
+}*/
+.rightblackmenu li a:hover, a:focus {
+  background: none repeat scroll 0 0 #0060a6;
+  text-decoration: none;
+}
+ 
