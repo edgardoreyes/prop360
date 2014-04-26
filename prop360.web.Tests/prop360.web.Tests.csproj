@@ -6,7 +6,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{290151A1-BDDA-4A4C-82E1-E802F99B7974}</ProjectGuid>
+    <ProjectGuid>{3FC8C3A4-BCD2-446A-B4B4-25F46BCC43B4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>prop360.web.Tests</RootNamespace>
@@ -93,7 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\prop360.web\prop360.web.csproj">
-      <Project>{20872B35-652B-46C6-B28C-12D6BAD58477}</Project>
+      <Project>{EADD3856-23A7-4D14-A6CD-E5C3F6016A66}</Project>
       <Name>prop360.web</Name>
     </ProjectReference>
   </ItemGroup>

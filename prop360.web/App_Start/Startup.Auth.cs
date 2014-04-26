@@ -32,7 +32,7 @@ namespace prop360.web
             //   appId: "",
             //   appSecret: "");
 
-            app.UseGoogleAuthentication();
+            //app.UseGoogleAuthentication();
         }
     }
 }

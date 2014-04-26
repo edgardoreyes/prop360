@@ -7,7 +7,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{20872B35-652B-46C6-B28C-12D6BAD58477}</ProjectGuid>
+    <ProjectGuid>{EADD3856-23A7-4D14-A6CD-E5C3F6016A66}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -39,28 +39,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Ninject">
-      <HintPath>..\packages\Ninject.3.2.0.0\lib\net45-full\Ninject.dll</HintPath>
-    </Reference>
-    <Reference Include="Ninject.Web.Common">
-      <HintPath>..\packages\Ninject.Web.Common.3.2.0.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Ninject.Web.Mvc">
-      <HintPath>..\packages\Ninject.MVC3.3.2.0.0\lib\net45-full\Ninject.Web.Mvc.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Spatial, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -115,9 +97,6 @@
       <Private>True</Private>
       <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="WebActivatorEx">
-      <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
-    </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
@@ -128,6 +107,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.1.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
     </Reference>
@@ -171,7 +156,6 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
-    <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -179,233 +163,24 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201404192314406_InitialCreate.cs" />
-    <Compile Include="Migrations\201404192314406_InitialCreate.Designer.cs">
-      <DependentUpon>201404192314406_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Administrator.cs" />
-    <Compile Include="Models\AuditFields.cs" />
-    <Compile Include="Models\Consultant.cs" />
-    <Compile Include="Models\Contact.cs" />
-    <Compile Include="Models\ContactViewModels.cs" />
-    <Compile Include="Models\Favorite.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\Client.cs" />
-    <Compile Include="Models\Professional.cs" />
-    <Compile Include="Models\Prop360Db.cs" />
-    <Compile Include="Models\Property.cs" />
-    <Compile Include="Models\PropertyPost.cs" />
-    <Compile Include="Models\Reference.cs" />
-    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\IMailService.cs" />
-    <Compile Include="Services\MailService.cs" />
-    <Compile Include="Services\MockMailService.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="arrow-down.png" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Site.css">
-      <DependentUpon>Site.less</DependentUpon>
-    </Content>
-    <Content Include="Content\Site.min.css">
-      <DependentUpon>Site.css</DependentUpon>
-    </Content>
-    <Content Include="Content\Template\assets\arrowleft.png" />
-    <Content Include="Content\Template\assets\arrowright.png" />
-    <Content Include="Content\Template\assets\arrow_large_left.png" />
-    <Content Include="Content\Template\assets\arrow_large_right.png" />
-    <Content Include="Content\Template\assets\arrow_left.png" />
-    <Content Include="Content\Template\assets\arrow_left2.png" />
-    <Content Include="Content\Template\assets\arrow_right.png" />
-    <Content Include="Content\Template\assets\arrow_right2.png" />
-    <Content Include="Content\Template\assets\black50.png" />
-    <Content Include="Content\Template\assets\boxed_bgtile.png" />
-    <Content Include="Content\Template\assets\bullet.png" />
-    <Content Include="Content\Template\assets\bullets.png" />
-    <Content Include="Content\Template\assets\bullets2.png" />
-    <Content Include="Content\Template\assets\bullet_boxed.png" />
-    <Content Include="Content\Template\assets\coloredbg.png" />
-    <Content Include="Content\Template\assets\grain.png" />
-    <Content Include="Content\Template\assets\gridtile.png" />
-    <Content Include="Content\Template\assets\gridtile_3x3.png" />
-    <Content Include="Content\Template\assets\gridtile_3x3_white.png" />
-    <Content Include="Content\Template\assets\gridtile_white.png" />
-    <Content Include="Content\Template\assets\large_left.png" />
-    <Content Include="Content\Template\assets\large_right.png" />
-    <Content Include="Content\Template\assets\loader.gif" />
-    <Content Include="Content\Template\assets\loader2.gif" />
-    <Content Include="Content\Template\assets\navigdots.png" />
-    <Content Include="Content\Template\assets\navigdots_bgtile.png" />
-    <Content Include="Content\Template\assets\shadow1.png" />
-    <Content Include="Content\Template\assets\shadow2.png" />
-    <Content Include="Content\Template\assets\shadow3.png" />
-    <Content Include="Content\Template\assets\small_left.png" />
-    <Content Include="Content\Template\assets\small_left_boxed.png" />
-    <Content Include="Content\Template\assets\small_right.png" />
-    <Content Include="Content\Template\assets\small_right_boxed.png" />
-    <Content Include="Content\Template\assets\timer.png" />
-    <Content Include="Content\Template\assets\timerdot.png" />
-    <Content Include="Content\Template\assets\transparent.jpg" />
-    <Content Include="Content\Template\assets\white50.png" />
-    <Content Include="Content\Template\css\blue.css" />
-    <Content Include="Content\Template\css\bootstrap.css" />
-    <Content Include="Content\Template\css\bootstrap.min.css" />
-    <Content Include="Content\Template\css\ddlevelsmenu-base.css" />
-    <Content Include="Content\Template\css\ddlevelsmenu-topbar.css" />
-    <Content Include="Content\Template\css\flexslider.css" />
-    <Content Include="Content\Template\css\font-awesome.min.css" />
-    <Content Include="Content\Template\css\green.css" />
-    <Content Include="Content\Template\css\prettyPhoto.css" />
-    <Content Include="Content\Template\css\red.css" />
-    <Content Include="Content\Template\css\settings.css" />
-    <Content Include="Content\Template\css\style.css" />
-    <Content Include="Content\Template\fonts\fontawesome-webfont.svg" />
-    <Content Include="Content\Template\img\arrow-down.png" />
-    <Content Include="Content\Template\img\arrow-right.png" />
-    <Content Include="Content\Template\img\ashok.jpg" />
-    <Content Include="Content\Template\img\bg_direction_nav.png" />
-    <Content Include="Content\Template\img\favicon\favicon.png" />
-    <Content Include="Content\Template\img\flat\1.png" />
-    <Content Include="Content\Template\img\flat\2.png" />
-    <Content Include="Content\Template\img\flat\3.png" />
-    <Content Include="Content\Template\img\flat\4.png" />
-    <Content Include="Content\Template\img\foot-quote.png" />
-    <Content Include="Content\Template\img\photos\1.jpg" />
-    <Content Include="Content\Template\img\photos\2.jpg" />
-    <Content Include="Content\Template\img\photos\3.jpg" />
-    <Content Include="Content\Template\img\photos\4.jpg" />
-    <Content Include="Content\Template\img\photos\5.jpg" />
-    <Content Include="Content\Template\img\photos\6.jpg" />
-    <Content Include="Content\Template\img\photos\7.jpg" />
-    <Content Include="Content\Template\img\photos\8.jpg" />
-    <Content Include="Content\Template\img\photos\s1.jpg" />
-    <Content Include="Content\Template\img\photos\s2.jpg" />
-    <Content Include="Content\Template\img\photos\s3.jpg" />
-    <Content Include="Content\Template\img\photos\s4.jpg" />
-    <Content Include="Content\Template\img\photos\s5.jpg" />
-    <Content Include="Content\Template\img\photos\s6.jpg" />
-    <Content Include="Content\Template\img\photos\s7.jpg" />
-    <Content Include="Content\Template\img\photos\s8.jpg" />
-    <Content Include="Content\Template\img\photos\tn_1.jpg" />
-    <Content Include="Content\Template\img\photos\tn_11.jpg" />
-    <Content Include="Content\Template\img\photos\tn_2.jpg" />
-    <Content Include="Content\Template\img\photos\tn_22.jpg" />
-    <Content Include="Content\Template\img\photos\tn_3.jpg" />
-    <Content Include="Content\Template\img\photos\tn_33.jpg" />
-    <Content Include="Content\Template\img\photos\tn_4.jpg" />
-    <Content Include="Content\Template\img\photos\tn_44.jpg" />
-    <Content Include="Content\Template\img\photos\tn_5.jpg" />
-    <Content Include="Content\Template\img\photos\tn_55.jpg" />
-    <Content Include="Content\Template\img\photos\tn_6.jpg" />
-    <Content Include="Content\Template\img\photos\tn_66.jpg" />
-    <Content Include="Content\Template\img\photos\tn_7.jpg" />
-    <Content Include="Content\Template\img\photos\tn_77.jpg" />
-    <Content Include="Content\Template\img\photos\tn_8.jpg" />
-    <Content Include="Content\Template\img\photos\tn_88.jpg" />
-    <Content Include="Content\Template\img\portfolio\1.jpg" />
-    <Content Include="Content\Template\img\portfolio\2.jpg" />
-    <Content Include="Content\Template\img\portfolio\3.jpg" />
-    <Content Include="Content\Template\img\portfolio\4.jpg" />
-    <Content Include="Content\Template\img\portfolio\5.jpg" />
-    <Content Include="Content\Template\img\portfolio\6.jpg" />
-    <Content Include="Content\Template\img\portfolio\7.jpg" />
-    <Content Include="Content\Template\img\portfolio\8.jpg" />
-    <Content Include="Content\Template\img\portfolio\tn1.jpg" />
-    <Content Include="Content\Template\img\portfolio\tn2.jpg" />
-    <Content Include="Content\Template\img\portfolio\tn3.jpg" />
-    <Content Include="Content\Template\img\portfolio\tn4.jpg" />
-    <Content Include="Content\Template\img\portfolio\tn5.jpg" />
-    <Content Include="Content\Template\img\portfolio\tn6.jpg" />
-    <Content Include="Content\Template\img\portfolio\tn7.jpg" />
-    <Content Include="Content\Template\img\portfolio\tn8.jpg" />
-    <Content Include="Content\Template\img\prettyPhoto\dark_rounded\btnNext.png" />
-    <Content Include="Content\Template\img\prettyPhoto\dark_rounded\btnPrevious.png" />
-    <Content Include="Content\Template\img\prettyPhoto\dark_rounded\contentPattern.png" />
-    <Content Include="Content\Template\img\prettyPhoto\dark_rounded\default_thumbnail.gif" />
-    <Content Include="Content\Template\img\prettyPhoto\dark_rounded\loader.gif" />
-    <Content Include="Content\Template\img\prettyPhoto\dark_rounded\sprite.png" />
-    <Content Include="Content\Template\img\prettyPhoto\dark_square\btnNext.png" />
-    <Content Include="Content\Template\img\prettyPhoto\dark_square\btnPrevious.png" />
-    <Content Include="Content\Template\img\prettyPhoto\dark_square\contentPattern.png" />
-    <Content Include="Content\Template\img\prettyPhoto\dark_square\default_thumbnail.gif" />
-    <Content Include="Content\Template\img\prettyPhoto\dark_square\loader.gif" />
-    <Content Include="Content\Template\img\prettyPhoto\dark_square\sprite.png" />
-    <Content Include="Content\Template\img\prettyPhoto\default\default_thumb.png" />
-    <Content Include="Content\Template\img\prettyPhoto\default\loader.gif" />
-    <Content Include="Content\Template\img\prettyPhoto\default\sprite.png" />
-    <Content Include="Content\Template\img\prettyPhoto\default\sprite_next.png" />
-    <Content Include="Content\Template\img\prettyPhoto\default\sprite_prev.png" />
-    <Content Include="Content\Template\img\prettyPhoto\default\sprite_x.png" />
-    <Content Include="Content\Template\img\prettyPhoto\default\sprite_y.png" />
-    <Content Include="Content\Template\img\prettyPhoto\facebook\btnNext.png" />
-    <Content Include="Content\Template\img\prettyPhoto\facebook\btnPrevious.png" />
-    <Content Include="Content\Template\img\prettyPhoto\facebook\contentPatternBottom.png" />
-    <Content Include="Content\Template\img\prettyPhoto\facebook\contentPatternLeft.png" />
-    <Content Include="Content\Template\img\prettyPhoto\facebook\contentPatternRight.png" />
-    <Content Include="Content\Template\img\prettyPhoto\facebook\contentPatternTop.png" />
-    <Content Include="Content\Template\img\prettyPhoto\facebook\default_thumbnail.gif" />
-    <Content Include="Content\Template\img\prettyPhoto\facebook\loader.gif" />
-    <Content Include="Content\Template\img\prettyPhoto\facebook\sprite.png" />
-    <Content Include="Content\Template\img\prettyPhoto\light_rounded\btnNext.png" />
-    <Content Include="Content\Template\img\prettyPhoto\light_rounded\btnPrevious.png" />
-    <Content Include="Content\Template\img\prettyPhoto\light_rounded\default_thumbnail.gif" />
-    <Content Include="Content\Template\img\prettyPhoto\light_rounded\loader.gif" />
-    <Content Include="Content\Template\img\prettyPhoto\light_rounded\sprite.png" />
-    <Content Include="Content\Template\img\prettyPhoto\light_square\btnNext.png" />
-    <Content Include="Content\Template\img\prettyPhoto\light_square\btnPrevious.png" />
-    <Content Include="Content\Template\img\prettyPhoto\light_square\default_thumbnail.gif" />
-    <Content Include="Content\Template\img\prettyPhoto\light_square\loader.gif" />
-    <Content Include="Content\Template\img\prettyPhoto\light_square\sprite.png" />
-    <Content Include="Content\Template\img\quote-blue.png" />
-    <Content Include="Content\Template\img\quote-green.png" />
-    <Content Include="Content\Template\img\quote-red.png" />
-    <Content Include="Content\Template\img\slider\s21.png" />
-    <Content Include="Content\Template\img\slider\s23.png" />
-    <Content Include="Content\Template\img\slider\s24.png" />
-    <Content Include="Content\Template\img\slider\slide1.jpg" />
-    <Content Include="Content\Template\img\slider\slide2.jpg" />
-    <Content Include="Content\Template\img\staff\4.jpg" />
-    <Content Include="Content\Template\img\staff\5.jpg" />
-    <Content Include="Content\Template\img\staff\6.jpg" />
-    <Content Include="Content\Template\img\staff\7.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css.map">
-      <DependentUpon>Site.css</DependentUpon>
-    </Content>
-    <None Include="Content\Site.less" />
+    <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Content\Template\assets\arrows.psd" />
-    <Content Include="Content\Template\assets\bullets.psd" />
-    <Content Include="Content\Template\assets\small_arrows.psd" />
-    <Content Include="Content\Template\fonts\fontawesome-webfont.eot" />
-    <Content Include="Content\Template\fonts\fontawesome-webfont.ttf" />
-    <Content Include="Content\Template\fonts\fontawesome-webfont.woff" />
-    <Content Include="Content\Template\fonts\FontAwesome.otf" />
-    <Content Include="Docs\Note-CreateProposalRequest.xlsx" />
-    <Content Include="Docs\PageFlow03252014.pdf" />
-    <Content Include="Docs\Property360ScreenDesign03252014.pdf" />
-    <Content Include="Docs\TableDesign03252014.xls" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\custom.js" />
-    <Content Include="Scripts\ddlevelsmenu.js" />
-    <Content Include="Scripts\easing.js" />
-    <Content Include="Scripts\flexslider.js" />
-    <Content Include="Scripts\html5shiv.js" />
-    <Content Include="Scripts\isotope.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.prettyPhoto.js" />
-    <Content Include="Scripts\jquery.themepunch.plugins.min.js" />
-    <Content Include="Scripts\jquery.themepunch.revolution.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -439,7 +214,6 @@
     <Content Include="Views\Account\Manage.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Home\MyMessages.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -450,11 +224,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201404192314406_InitialCreate.resx">
-      <DependentUpon>201404192314406_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -472,7 +241,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>51672</DevelopmentServerPort>
+          <DevelopmentServerPort>51959</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:30106/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
