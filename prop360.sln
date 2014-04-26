@@ -11,6 +11,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prop360.web", "prop360.web\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prop360.web.Tests", "prop360.web.Tests\prop360.web.Tests.csproj", "{3FC8C3A4-BCD2-446A-B4B4-25F46BCC43B4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{BEC75CCB-EA1B-48DE-9FCC-E764C4D51560}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\..\Prop360\Design03252014\ScreenDesign\Note-CreateProposalRequest.xlsx = ..\..\..\..\..\Prop360\Design03252014\ScreenDesign\Note-CreateProposalRequest.xlsx
+		..\..\..\..\..\Prop360\Design03252014\ScreenDesign\PageFlow03252014.pdf = ..\..\..\..\..\Prop360\Design03252014\ScreenDesign\PageFlow03252014.pdf
+		..\..\..\..\..\Prop360\Design03252014\ScreenDesign\Property360ScreenDesign03252014.pdf = ..\..\..\..\..\Prop360\Design03252014\ScreenDesign\Property360ScreenDesign03252014.pdf
+		..\..\..\..\..\Prop360\DBDesignPackage04082014ForEdgar\TableDesign.xls = ..\..\..\..\..\Prop360\DBDesignPackage04082014ForEdgar\TableDesign.xls
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
