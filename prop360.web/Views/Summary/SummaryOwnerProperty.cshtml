@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Summary of Owner Property";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+@*Zen Coding*@
+@*div.messages>div.message
+   >  - means nested
+   +  - means sibling
+   lorem - is a paragraph generator
+*@
+@*.messages>(.message>.firstname+.lastname+.birthdate+.remark>lorem)*10*@
