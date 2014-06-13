@@ -1,0 +1,29 @@
+﻿@model prop360.web.Models.RedirectViewModel
+
+@*Decide: For static text, such as title and subtitle, put in cshtml file to keep code straight forward and faster to load.
+  Try to let controller handles dynamic stuff.*@
+
+@*@{
+    ViewBag.Title = "Administrator Home";
+  }*@
+@*<h2>@ViewBag.Title</h2>*@
+@*<h2>@ViewBag.Title</h2>
+  <h3>@ViewBag.Message</h3>*@
+
+<h2>Administrator Home</h2>
+
+<div class="row">
+  @*Contain main body of page*@
+  <div class="col-md-6">
+    @*Contain left section of page*@
+    <div class="panel panel-default">
+      @*panel class adds frame around items to group related items together*@
+
+      
+      <pre> @Html.ActionLink("Update System Setting", "SystemSetting") </pre>  @*Need to define SystemSetting Action*@
+      <pre> @Html.ActionLink("My Profile", "PlaceHolder") </pre>
+      <pre>  @Html.ActionLink("View Admin Team", "PlaceHolder") </pre>
+
+    </div>
+  </div>
+</div>

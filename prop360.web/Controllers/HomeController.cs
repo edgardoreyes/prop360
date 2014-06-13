@@ -26,5 +26,16 @@ namespace prop360.web.Controllers
 
             return View();
         }
+
+
+        public ActionResult HAdministrator()
+        {
+          ViewBag.Message = "Message from HomeController-HAdministrator";
+          ViewBag.Title = "Title from HomeController - HAdministrator";
+
+          return View();
+        }
+
+
     }
 }
