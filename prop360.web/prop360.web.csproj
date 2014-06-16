@@ -179,6 +179,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\arrow-back.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -221,6 +222,11 @@
     <Content Include="Views\Summary\About.cshtml" />
     <Content Include="Views\Summary\SummaryOwnerProperty.cshtml" />
     <Content Include="Views\Home\HAdministrator.cshtml" />
+    <Content Include="Views\Home\HBuyer.cshtml" />
+    <Content Include="Views\Home\HConsultant.cshtml" />
+    <Content Include="Views\Home\HOwner.cshtml" />
+    <Content Include="Views\Home\HProfessional1.cshtml" />
+    <Content Include="Views\Home\HProfessional2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

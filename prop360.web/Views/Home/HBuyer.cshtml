@@ -1,0 +1,20 @@
+﻿@model prop360.web.Models.RedirectViewModel
+
+<h4>Buyer Home</h4>
+
+<div class="row">
+  @*Contain main body of page*@
+  <div class="col-md-6">
+    @*Contain left section of page*@
+    <div class="panel panel-default">
+      @*panel class adds frame around items to group related items together*@
+      
+      <pre> @Html.ActionLink("Favorites", "Favorites") </pre>  @*Need to define SystemSetting Action*@
+      <pre> @Html.ActionLink("Sent Proposal", "PlaceHolder") </pre>
+      <pre> @Html.ActionLink("My Profile", "PlaceHolder") </pre>
+      <pre> @Html.ActionLink("Posted Properties", "PlaceHolder") </pre>
+
+    </div>
+  </div>
+</div>
+

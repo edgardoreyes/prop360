@@ -36,6 +36,30 @@ namespace prop360.web.Controllers
           return View();
         }
 
+        public ActionResult HBuyer()
+        {
+          return View();
+        }
+
+        public ActionResult HConsultant()
+        {
+          return View();
+        }
+
+        public ActionResult HOwner()
+        {
+          return View();
+        }
+
+        public ActionResult HProfessional1()
+        {
+          return View();
+        }
+
+        public ActionResult HProfessional2()
+        {
+          return View();
+        }
 
     }
 }
